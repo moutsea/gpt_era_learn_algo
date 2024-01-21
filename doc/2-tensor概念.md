@@ -235,3 +235,9 @@ torch.randn(size) # 返回shape=size，标准正态分布随机值的tensor
 
 
 注意这几种构造函数返回的`tensor`默认类型都是`torch.float`
+
+
+欢迎加入我的星球~
+
+
+![](https://moutsea-blog.oss-cn-hangzhou.aliyuncs.com/%E6%98%9F%E7%90%83%E4%BC%98%E6%83%A0%E5%88%B8%20(6).jpeg)
