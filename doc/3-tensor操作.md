@@ -139,3 +139,78 @@ x + y, x - y, x * y, x / y
 
 
 
+对于一个`tensor`来说，如果我们只是想要交换某些轴的维度的话，我们可以使用`transpose`和`permute`。虽然都是交换维度，但是这两个api在使用上还是有一点小区别。
+
+
+
+我们先来看`transpose`，它用来交换`tensor`中的两个轴，我们传入的是这两个轴的下标。
+
+
+
+![](https://moutsea-blog.oss-cn-hangzhou.aliyuncs.com/image-20240123200239317.png)
+
+
+
+在这个例子当中，我们先创建了一个`shape`为`(3, 2, 4)`的`tensor`，接着我们交换了它`shape`中的第0轴和第1轴。得到的新`tensor`的`shape`自然就是`(2, 3, 4)`了。可以简单理解成`shape`这个数组当中对应下标交换。
+
+
+
+`permute`虽然也是修改`tensor`的轴，但它的功能是任意排列这些轴，而不是只能交换其中两个。
+
+
+
+使用的时候当然没有任何限制，主要还是根据自己的需求。如果`tensor`很复杂，而我们又只需要交换其中两个轴，那么`transpose`足够胜任。如果需要交换的轴数量比较多，那就直接上`permute`吧。
+
+
+
+`tensor`的轴除了可以增加也可以减少，由于`tensor`中的元素数量是固定的。所以无论我们是删除还是添加轴，对应的维度都只能是1。添加轴与删除轴是一对相反的操作，删除轴的api是`squeeze`，翻译成中文是压榨、挤压的意思，而添加轴的api是`unsqueeze`，是`squeeze`的反义词。
+
+
+
+我们先来看`squeeze`的例子：
+
+
+
+![](https://moutsea-blog.oss-cn-hangzhou.aliyuncs.com/image-20240123201215034.png)
+
+
+
+我们一开始创建的`x`的`shape`是`(3, 1, 5)`，经过了`squeeze`之后，得到的`tensor` `shape`变成`(3, 5)`。当我们执行`squeeze`的时候，会将所以维度为1的轴全部消除。
+
+
+
+如果要添加一个轴，我们可以使用`unsqueeze`，它接受一个传参用来指定我们添加轴的位置。
+
+
+
+![](https://moutsea-blog.oss-cn-hangzhou.aliyuncs.com/image-20240123203831100.png)
+
+
+
+还是刚刚那个例子，我们调用`unsqueeze`并且传入一个0，得到的`tensor` `shape`为`[1, 3, 1, 5]`。这是因为我们传入0表示在第0轴添加一个新轴。我们也可以传入负数的下标，和数组当中的负数下标是一个用法：
+
+
+
+![](https://moutsea-blog.oss-cn-hangzhou.aliyuncs.com/image-20240123205356255.png)
+
+
+
+`tensor`也支持Python中的索引和切片操作：
+
+
+
+![](https://moutsea-blog.oss-cn-hangzhou.aliyuncs.com/image-20240123205553323.png)
+
+
+
+还有一些聚合操作，比如求和、求均值、求最大值、求最小值的操作，都比较直观，我们过一下即可。
+
+
+
+```python
+tensor.sum() # 求和
+tensor.max() # 求最大值
+tensor.min() # 求最小值
+tensor.mean() # 求均值
+```
+
