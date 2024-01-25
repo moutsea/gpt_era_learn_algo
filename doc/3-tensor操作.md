@@ -1,4 +1,4 @@
-这一章节我们来将`tensor`的运算和操作。
+这一章节我们来看看`tensor`的运算和操作。
 
 
 
@@ -214,3 +214,7 @@ tensor.min() # 求最小值
 tensor.mean() # 求均值
 ```
 
+欢迎加入我的星球~
+
+
+![](https://moutsea-blog.oss-cn-hangzhou.aliyuncs.com/%E6%98%9F%E7%90%83%E4%BC%98%E6%83%A0%E5%88%B8%20(6).jpeg)
