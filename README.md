@@ -46,17 +46,21 @@ GPT时代学算法
 我打算学一学游戏界的波兰蠢驴，把专题文章开源，放在公众号、博客和github里。如果你们觉得我写得不错，想要支持我早日摆脱上班实现财富自由。不妨加入一下我的知识星球，我会在星球里分享我用Ai做量化的相关心得体会，以及一些吹水言论。
 
 
-
-![](https://moutsea-blog.oss-cn-hangzhou.aliyuncs.com/image-20240120203412522.png)
-
-
-
 哪怕只是一个免费的star，对我来说也是莫大的帮助。
 
 
 
 再次感谢大家。
 
+
+
+个人公众号：
+
+![](https://moutsea-blog.oss-cn-hangzhou.aliyuncs.com/image-20240202101927866.png)
+
+
+
+知识星球：
 
 
 ![](https://moutsea-blog.oss-cn-hangzhou.aliyuncs.com/%E6%98%9F%E7%90%83%E4%BC%98%E6%83%A0%E5%88%B8%20(6).jpeg)
